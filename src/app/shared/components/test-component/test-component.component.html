@@ -1,0 +1,27 @@
+I want to implement as given : <a href="https://material.angular.io/components/chips/overview">Angular material</a>
+<hr>
+<div>
+  <b> Normal working placeholder without matChipList Or attribute like 'matChipInputFor' in input tag :</b>
+  <input placeholder="{{'HELLO' | translate }}" style="background: lightgoldenrodyellow;" />
+ <hr>
+  <p>
+    <b><span style="color: red">Problem</span> : Problem Here is ( (I added 'matChip' attributes ( Please refer code ) ) <br> After clicking below button we need to click inside input
+      box to see translated word ). : </b><br>
+    <mat-form-field>
+      <mat-chip-list #chipList>
+        <input placeholder="{{'HELLO' | translate }}" [matChipInputFor]="chipList" [matChipInputAddOnBlur]="addOnBlur" style="background: lightgoldenrodyellow;"
+        />
+      </mat-chip-list>
+    </mat-form-field>
+  </p>
+  <hr>
+  <p>
+    <b><span style="color: green">input tag in 'mat-chip-list'</span> : May be this will help to find issue. ( I removed 'matChip' attributes ( Please refer code ) ) : </b><br>
+    <mat-form-field>
+      <mat-chip-list>
+        <input placeholder="{{'HELLO' | translate }}" style="background: lightgoldenrodyellow;" />
+      </mat-chip-list>
+    </mat-form-field>
+  </p>
+  
+</div>
